@@ -1,0 +1,22 @@
+{
+  "name": "karen-frontend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "serve ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mowanuola/Karen-FrontEnd.git"
+  },
+  "author": "Akin-jimoh Mowanuola",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mowanuola/Karen-FrontEnd/issues"
+  },
+  "homepage": "https://github.com/mowanuola/Karen-FrontEnd#readme",
+  "dependencies": {
+    "serve": "^10.1.2"
+  }
+}
