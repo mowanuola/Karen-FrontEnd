@@ -1,0 +1,61 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../font/Montserrat-Medium.ttf');
+}
+body{
+    font-family: 'Montserrat', 'Sans Serif';
+}
+a{
+    text-decoration: none;
+    color: #1C92D2;
+    transition: 0.1s ease all;
+    cursor: pointer;
+ }
+ a:hover{
+color: #808080;
+text-decoration: underline;
+ }
+ .container{
+     width: 100%;
+     max-width: 800px;
+     margin: auto;
+ }
+.splash{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    padding-top: 20vh;
+}
+.splash-text, .splash-button{
+    margin: 50px 0 0 0;
+
+}
+.button{
+    border: none;
+    border-radius: 6px;
+    color: #808080;
+    background-color: #f4f4f4;
+    padding: 10px 30px;
+}
+.primary-button{
+    background-color: #1C92D2;
+    color: #ffffff;
+}
+.full-width{
+    width: 100%;
+}
+.input{
+width: 60%;
+margin: 20px;
+border: none ;
+padding: 10px;
+border-radius: 6px;
+background-color:#f4f4f4; 
+}
+
+.submit{
+    font-weight: 10;
+}
