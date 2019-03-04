@@ -15,10 +15,36 @@ a{
 color: #808080;
 text-decoration: underline;
  }
+ header{
+     background: #1C92D2;
+     background: linear-gradient(to right, #1c92d2, #e6fbff);
+ }
+ header::after
+{
+    content: '';
+    display: table;
+    clear: both;
+}
+ nav{
+     float: right;
+ }
+ nav ul{
+     margin: 0;
+     padding: 0;
+     list-style: none;
+ }
+ nav li{
+     display: inline block;
+     margin-right: 450px;
+ }
  .container{
      width: 100%;
      max-width: 800px;
      margin: auto;
+ }
+ .heading{
+     width:80%;
+     margin: 0, auto;
  }
 .splash{
     display: flex;
@@ -28,6 +54,22 @@ text-decoration: underline;
     width: 100%;
     max-width: 600px;
     padding-top: 20vh;
+}
+.login-splash{
+    padding-top: 10vh;
+}
+.signup-splash{
+    padding-top: 0;
+}
+.logo{
+    width: 100%;
+    max-width: 600px;
+}
+.icon{
+    width: 100%;
+    max-width: 100px;
+    align-content: center;
+    
 }
 .splash-text, .splash-button{
     margin: 50px 0 0 0;
@@ -59,3 +101,32 @@ background-color:#f4f4f4;
 .submit{
     font-weight: 10;
 }
+.hamburger {
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #e6fbff;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  
+  /* Rotate first bar */
+  .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+    transform: rotate(-45deg) translate(-9px, 6px) ;
+  }
+  
+  /* Fade out the second bar */
+  .change .bar2 {
+    opacity: 0;
+  }
+  
+  /* Rotate last bar */
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+    transform: rotate(45deg) translate(-8px, -8px) ;
+  }
