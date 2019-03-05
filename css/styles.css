@@ -1,132 +1,236 @@
 @font-face {
-    font-family: 'Montserrat';
-    src: url('../font/Montserrat-Medium.ttf');
+  font-family: "Montserrat";
+  src: url("../font/Montserrat-Medium.ttf");
 }
-body{
-    font-family: 'Montserrat', 'Sans Serif';
+body {
+  font-family: "Montserrat", "Sans Serif" !important;
+  margin: 0;
 }
-a{
-    text-decoration: none;
-    color: #1C92D2;
-    transition: 0.1s ease all;
-    cursor: pointer;
- }
- a:hover{
-color: #808080;
-text-decoration: underline;
- }
- header{
-     background: #1C92D2;
-     background: linear-gradient(to right, #1c92d2, #e6fbff);
- }
- header::after
-{
-    content: '';
-    display: table;
-    clear: both;
+a {
+  text-decoration: none;
+  color: #1c92d2;
+  transition: 0.1s ease all;
+  cursor: pointer;
 }
- nav{
-     float: right;
- }
- nav ul{
-     margin: 0;
-     padding: 0;
-     list-style: none;
- }
- nav li{
-     display: inline block;
-     margin-right: 450px;
- }
- .container{
-     width: 100%;
-     max-width: 800px;
-     margin: auto;
- }
- .heading{
-     width:80%;
-     margin: 0, auto;
- }
-.splash{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    max-width: 600px;
-    padding-top: 20vh;
+a:hover {
+  color: #808080;
+  text-decoration: underline;
 }
-.login-splash{
-    padding-top: 10vh;
+header {
+  background: #1c92d2;
+  background: linear-gradient(to right, #1c92d2, #e6fbff);
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  text-align: center;
 }
-.signup-splash{
-    padding-top: 0;
+header#edit-profile {
+  text-align: right;
 }
-.logo{
-    width: 100%;
-    max-width: 600px;
+header::after {
+  content: "";
+  display: table;
+  clear: both;
 }
-.icon{
-    width: 100%;
-    max-width: 100px;
-    align-content: center;
-    
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
-.splash-text, .splash-button{
-    margin: 50px 0 0 0;
-
+nav li {
+  display: inline block;
+  margin: auto;
 }
-.button{
-    border: none;
-    border-radius: 6px;
-    color: #808080;
-    background-color: #f4f4f4;
-    padding: 10px 30px;
-}
-.primary-button{
-    background-color: #1C92D2;
-    color: #ffffff;
-}
-.full-width{
-    width: 100%;
-}
-.input{
-width: 60%;
-margin: 20px;
-border: none ;
-padding: 10px;
-border-radius: 6px;
-background-color:#f4f4f4; 
+button {
+  font-family: "Montserrat";
 }
 
-.submit{
-    font-weight: 10;
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #ffffff;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  text-align: left;
+}
+
+.sidenav-open {
+  width: 250px;
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 10px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #1c92d2;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #0d6392;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+.avatar {
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+  border-radius: 100%;
+}
+.container {
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+}
+
+.hamburger-menu {
+  position: absolute;
+  top: 5;
+  left: 5;
+  z-index: 1000;
+}
+
+.splash {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  padding-top: 20vh;
+}
+.details .name,.email{
+ padding: 0;
+ margin: 0;
+ text-align: center;
+}
+.login-splash {
+  padding-top: 10vh;
+}
+.signup-splash {
+  padding-top: 5vh;
+}
+.card-strip {
+  background-color: #1c92d2;
+  border-radius: 6px;
+  padding: 10px;
+  width: 70%;
+  margin: 10px 0;
+  color: #ffffff;
+}
+.card-strip .left {
+  float: left;
+}
+.card-strip .right {
+  float: right;
+}
+.logo {
+  width: 100%;
+  max-width: 280px;
+}
+.icon {
+  width: 100%;
+  max-width: 100px;
+  align-content: center;
+}
+.splash-text,
+.splash-button {
+  margin: 50px 0 0 0;
+}
+.button {
+  border: none;
+  border-radius: 6px;
+  color: #808080;
+  background-color: #f4f4f4;
+  padding: 10px 30px;
+}
+.primary-button {
+  background-color: #1c92d2;
+  color: #ffffff;
+}
+.logout-btn {
+  background-color: transparent;
+  border: none;
+  padding: 10px;
+  color: firebrick;
+  font-size: 18px;
+  padding-top: 70%;
+}
+.full-width {
+  width: 100%;
+}
+.input {
+  width: 60%;
+  margin: 15px;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  background-color: #f4f4f4;
+}
+
+.submit {
+  font-weight: 10;
 }
 .hamburger {
-    display: inline-block;
-    cursor: pointer;
-  }
-  
-  .bar1, .bar2, .bar3 {
-    width: 35px;
-    height: 5px;
-    background-color: #e6fbff;
-    margin: 6px 0;
-    transition: 0.4s;
-  }
-  
-  /* Rotate first bar */
-  .change .bar1 {
-    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
-    transform: rotate(-45deg) translate(-9px, 6px) ;
-  }
-  
-  /* Fade out the second bar */
-  .change .bar2 {
-    opacity: 0;
-  }
-  
-  /* Rotate last bar */
-  .change .bar3 {
-    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
-    transform: rotate(45deg) translate(-8px, -8px) ;
-  }
+  display: inline-block;
+  cursor: pointer;
+  padding-left: 10px;
+  padding-top: 8px;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #e6fbff;
+  margin: 6px 0;
+  transition: 0.4s;
+  border-radius: 6px;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+  background-color: #1c92d2;
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+  opacity: 0;
+  background-color: #1c92d2;
+}
+
+/* Rotate last bar */
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+  background-color: #1c92d2;
+}
+.dropdown-menu {
+  width: 60%;
+  margin: 20px;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  background-color: #f4f4f4;
+  font-family: "Montserrat";
+  font-weight: 10;
+}

@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Profile</title>
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
@@ -12,6 +11,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./css/styles.css" />
+    <title>Meal Planner</title>
   </head>
   <body>
     <header>
@@ -38,48 +38,32 @@
         <button class="logout-btn">Sign out</button>
       </div>
     </header>
-    <div class="container splash" style="padding-top:10vh;">
-      <img src=".\img\avatar.png" alt="avatar" class="avatar" />
-      <div class="details">
-        <h3 class="name">YARA SHAHIDI</h3>
-        <p class="email">yaransha@abc.com</p>
+    <main id="main">
+      <div class="container splash">
+        <h2 style="font-weight: 10;">Meal Planner</h2>
+        <label for="bmi">BMI:</label>
+        <select name="BloodType" id="BloodType" class="dropdown-menu">
+          <option value="empty">*Select your Blood Type*</option>
+          <option value="TypeA">A</option>
+          <option value="TypeB">B</option>
+          <option value="TypeAB">AB</option>
+          <option value="TypeO">O</option>
+        </select>
+        <select name="MedDiagnosis" id="MedDiagnosis" class="dropdown-menu">
+          <option value="empty">*Select a Medical Diagnosis*</option>
+          <option value="HBP">High Blood Pressure</option>
+          <option value="HepB">Hepatitis B</option>
+          <option value="HighChol">High Cholesterol</option>
+          <option value="BrCancer">Breast Cancer</option>
+        </select>
+        <button
+          type="submit"
+          class="button primary-button full-width splash-button"
+        >
+          Done
+        </button>
       </div>
-      <a href="editprofile.html" style="text-align: right; width: 70%;"
-        >Edit Profile</a
-      >
-      <div class="card-strip">
-        <div class="left">
-          Height
-        </div>
-        <div class="right">
-          183cm
-        </div>
-      </div>
-      <div class="card-strip">
-        <div class="left">
-          Weight
-        </div>
-        <div class="right">
-          75kg
-        </div>
-      </div>
-      <div class="card-strip">
-        <div class="left">
-          Blood Type
-        </div>
-        <div class="right">
-          A
-        </div>
-      </div>
-      <div class="card-strip">
-        <div class="left">
-          Sex
-        </div>
-        <div class="right">
-          Female
-        </div>
-      </div>
-    </div>
+    </main>
   </body>
   <script src="./js/app.js"></script>
 </html>
