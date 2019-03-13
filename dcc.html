@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Daily Calorie Calculator</title>
+    <link rel="manifest" href="./manifest.json">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/styles.css">
 </head>
@@ -36,12 +37,31 @@
     <main id="main">
            
               
-    <div class="container splash">
+    <div class="container splash" style="padding-top: 5vh; padding-bottom: 5vh">
             <h2 style="font-weight: 10;">Daily Calorie Calculator</h2>
+        <input type="text" class="input" name="age" id="age" placeholder="How old are you?" required>
+        <p>What is your estimated Body Fat Percentage?</p>
+        <div>
+          <img src=".\img\20180112_075657.jpg" alt="BFP" class="bfp" > 
+          <img src=".\img\20180112_075657.jpg" alt="BFP" class="bfp" >
+          <img src=".\img\20180112_075657.jpg" alt="BFP" class="bfp" >
+        </div>
+        <div>
+          <img src=".\img\20180112_075657.jpg" alt="BFP" class="bfp" >
+          <img src=".\img\20180112_075657.jpg" alt="BFP" class="bfp" >
+          <img src=".\img\20180112_075657.jpg" alt="BFP" class="bfp" >
+        </div>
         <input type="text" class="input" name="cweight" id="cweight" placeholder="Enter Current Weight" required>
         <input type="text" class="input" name="dweight" id="dweight" placeholder="Enter Desired Weight" required>
         <input type="text" class="input" name="height" id="height" placeholder="Enter Height" required>   
+        <p>How active are you?</p>
+        <div>
+          <img src=".\img\20180112_075657.jpg" alt="BFP" class="bfp" >
+          <img src=".\img\20180112_075657.jpg" alt="BFP" class="bfp" >
+          <img src=".\img\20180112_075657.jpg" alt="BFP" class="bfp" >
+        </div>
         <button type="submit" class="button primary-button full-width splash-button">Calculate</button>
+       
     </div>
 </body>
 <script src="./js/app.js"></script>
