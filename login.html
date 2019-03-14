@@ -10,13 +10,15 @@
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
-    <div class="container splash login-splash">
-  <img src=".\img\karen_blue.png" alt="Logo" class="logo"> 
-  <input type="email" class="input" name="email" id="email" placeholder="Email" required>
-  <input type="password" class="input" name="password" id="password" placeholder="Password" required>
-  <button type="submit" class="button primary-button full-width splash-button">Sign In</button>
-  <p >Don't have an account? <a href="signup.html">Sign Up</a></p>
-</div>
+      <form id="login-form" class="container splash login-splash">
+          <img src=".\img\karen_blue.png" alt="Logo" class="logo"> 
+          <input type="username" class="input" name="username" id="username" placeholder="Username" required>
+          <input type="password" class="input" name="password" id="password" placeholder="Password" required>
+          <button type="submit" class="button primary-button full-width splash-button" id ="login-button">Sign In</button>
+          <p >Don't have an account? <a href="signup.html">Sign Up</a></p>
+      </form>
 </body>
 <script src="./js/app.js"></script>
+<script src="./js/login.js"></script>
+
 </html>
