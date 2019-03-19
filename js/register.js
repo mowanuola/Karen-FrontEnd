@@ -40,7 +40,7 @@ registerForm.addEventListener("submit", async event => {
     birth_date: registerForm.dob.value,
     email: registerForm.email.value,
     sex: registerForm.sex.value,
-   
+    bloodtype: registerForm.bloodtype.value
   };
   await register(data);
   registerButton.setAttribute("disabled", false);

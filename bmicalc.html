@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>BMI Calculator</title>
-    <link rel="manifest" href="./manifest.json">
+    <link rel="manifest" href="./manifest.json" />
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
@@ -39,33 +39,33 @@
         <button class="logout-btn">Sign out</button>
       </div>
     </header>
-    <main id="main">
-      <div class="container splash">
-        <h2 style="font-weight: 10;">BMI Calculator</h2>
-        <input
-          type="text"
-          class="input"
-          name="height"
-          id="height"
-          placeholder="Enter Height"
-          required
-        />
-        <input
-          type="text"
-          class="input"
-          name="weight"
-          id="weight"
-          placeholder="Enter Weight"
-          required
-        />
-        <button
-          type="submit"
-          class="button primary-button full-width splash-button"
-        >
-          Calculate
-        </button>
-      </div>
-    </main>
+    <form class="container splash" id="bmi-calc-form">
+      <h2 style="font-weight: 10;">BMI Calculator</h2>
+      <input
+        type="number"
+        class="input"
+        name="height"
+        id="height"
+        placeholder="Enter Height"
+        required
+      />
+      <input
+        type="number"
+        class="input"
+        name="weight"
+        id="weight"
+        placeholder="Enter Weight"
+        required
+      />
+      <button
+        type="submit"
+        id="submit-button"
+        class="button primary-button full-width splash-button"
+      >
+        Calculate
+      </button>
+    </form>
   </body>
   <script src="./js/app.js"></script>
+  <script src="./js/bmi.js"></script>
 </html>
