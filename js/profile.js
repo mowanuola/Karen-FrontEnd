@@ -6,6 +6,8 @@ const sexElement = document.querySelector("#sex");
 const weightElement = document.querySelector("#weight");
 const heightElement = document.querySelector("#height");
 const emailElement = document.querySelector("#email");
+const bmiElement = document.querySelector("#bmi");
+const dciElement = document.querySelector("#dci");
 
 function isAuthenticated() {
   const token = localStorage.getItem("token");
@@ -16,11 +18,13 @@ function isAuthenticated() {
 }
 function displayData(data) {
   userNameElement.innerHTML = `${data.first_name} ${data.last_name}`;
-  bloodTypeElement.innerHTML = data.bloodtype.toUpperCase();
+  bloodTypeElement.innerHTML = data.bloodtype.toUpperCase() || "N/A";
   sexElement.innerHTML = data.sex;
-  weightElement.innerHTML = data.weight || "N/A";
-  heightElement.innerHTML = data.height || "N/A";
+  weightElement.innerHTML = `${data.weight} kg` || "N/A";
+  heightElement.innerHTML = `${data.height} cm` || "N/A";
   emailElement.innerHTML = data.email;
+  bmiElement.innerHTML = data.bmi;
+  dciElement.innerHTML = `${data.dci} calories`;
 }
 async function getData(data) {
   try {

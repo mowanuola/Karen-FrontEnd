@@ -37,32 +37,47 @@
     <main id="main">
            
               
-    <div class="container splash" style="padding-top: 5vh; padding-bottom: 5vh">
-            <h2 style="font-weight: 10;">Daily Calorie Calculator</h2>
-        <input type="text" class="input" name="age" id="age" placeholder="How old are you?" required>
-        <p>What is your estimated Body Fat Percentage?</p>
-        <div>
-          <img src=".\img\20180112_075657.jpg" alt="BFP" class="bfp" > 
-          <img src=".\img\20180112_075657.jpg" alt="BFP" class="bfp" >
-          <img src=".\img\20180112_075657.jpg" alt="BFP" class="bfp" >
-        </div>
-        <div>
-          <img src=".\img\20180112_075657.jpg" alt="BFP" class="bfp" >
-          <img src=".\img\20180112_075657.jpg" alt="BFP" class="bfp" >
-          <img src=".\img\20180112_075657.jpg" alt="BFP" class="bfp" >
-        </div>
-        <input type="text" class="input" name="cweight" id="cweight" placeholder="Enter Current Weight" required>
-        <input type="text" class="input" name="dweight" id="dweight" placeholder="Enter Desired Weight" required>
-        <input type="text" class="input" name="height" id="height" placeholder="Enter Height" required>   
+    <form class="container splash" style="padding-top: 5vh; padding-bottom: 5vh" id="dci-calc-form">
+         <div class="card-strip">
+           <div class="left">
+             Age
+           </div>
+           <div class="right" id="age">
+
+           </div>
+         </div> 
+         <div class="card-strip">
+          <div class="left">
+            Weight
+          </div>
+          <div class="right" id="weight">
+
+          </div>
+        </div> 
+        <div class="card-strip">
+          <div class="left">
+            Height
+          </div>
+          <div class="right" id="height" >
+
+          </div>
+        </div> 
         <p>How active are you?</p>
-        <div>
-          <img src=".\img\20180112_075657.jpg" alt="BFP" class="bfp" >
-          <img src=".\img\20180112_075657.jpg" alt="BFP" class="bfp" >
-          <img src=".\img\20180112_075657.jpg" alt="BFP" class="bfp" >
-        </div>
-        <button type="submit" class="button primary-button full-width splash-button">Calculate</button>
+        <div class="center-align" id="useractivity"> 
+          <input type="radio" name="useractivity" id="size_1" value="1" checked />
+           <label for="size_1">Not Active</label>
+            
+           <input type="radio" name="useractivity" id="size_2" value="2" />
+           <label for="size_2">Moderately Active</label>
+            
+             <input type="radio" name="useractivity" id="size_3" value="3" />
+           <label for="size_3">Very Active</label>
+            
+            </div>
+        <button type="submit" class="button primary-button full-width splash-button" style="margin-top: 20vh;" id="submit-button">Calculate</button>
        
-    </div>
+          </form>
 </body>
 <script src="./js/app.js"></script>
+<script src="./js/dci.js"></script>
 </html>
