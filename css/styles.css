@@ -146,6 +146,93 @@ button {
 .card-strip .right {
   float: right;
 }
+
+#card {
+  margin: 2em auto;
+  max-width: 420px;
+  min-width: 360px;
+  height: auto;
+  background-color: #f2f2f2;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  border-bottom: 0.5em solid #1c92d2;
+}
+#hero-container {
+  position: relative;
+}
+#hero {
+  width: 100%;
+  height: 250px;
+}
+#bookmark {
+  padding-top: 0.25em;
+  padding-right: 0.25em;
+  position: absolute;
+  display: block;
+  right: 0;
+  top: 0;
+  opacity: 0.3;
+  font-size: 2.5em;
+  color: #f2f2f2;
+}
+#card-content {
+  padding: 0.25em 1.5em;
+}
+
+#category {
+  font-style: italic;
+  margin: 0;
+  color: #c3c3c3;
+}
+
+#title {
+  font-weight: 900;
+  margin: 0.25em 0;
+  color: #2f2f2f;
+}
+#post-discription {
+  margin: 0.5em 0;
+  color: #333333;
+}
+#main-button {
+  border: none;
+  background: none;
+  font-weight: 700;
+  font-size: 1em;
+  color: #1c92d2;
+  margin-top: 0.5em;
+  padding: 0;
+  margin-bottom: 0.25em;
+}
+#main-button:focus {
+  outline: none;
+}
+.ripple {
+  position: relative;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+}
+.ripple:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  background-image: radial-gradient(circle, #fff 30%, transparent 10.01%);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  transform: scale(10, 10);
+  opacity: 0;
+  transition: transform 0.5s, opacity 1s;
+}
+.ripple:active:after {
+  transform: scale(0, 0);
+  opacity: 0.3;
+  transition: 0s;
+}
+
 .logo {
   width: 100%;
   max-width: 280px;
@@ -242,7 +329,7 @@ button {
 }
 
 strong {
-  color:  #1c92d2;
+  color: #1c92d2;
 }
 .transition {
   transition: all 0.3s ease-out;
@@ -281,4 +368,4 @@ label {
 }
 input[type="radio"]:checked + label {
   background-color: #f4f4f4;
-  }
+}

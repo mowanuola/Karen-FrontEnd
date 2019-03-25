@@ -11,7 +11,7 @@ async function register(data) {
     if (response.status === 201) {
       const json = await response.json();
       localStorage.setItem("token", json.token);
-      window.location = "login.html";
+      window.location = "profile.html";
     } else {
       alert("Invalid registration!");
       return;
