@@ -1,4 +1,11 @@
 const CONFIG = { API_URL: "http://localhost:8000" };
+
+function isAuthenticated() {
+  const token = localStorage.getItem("token");
+  if (token) {
+    window.location = "profile.html";
+  }
+}
 async function login(data) {
   try {
     const response = await fetch(`${CONFIG.API_URL}/login`, {
@@ -39,3 +46,4 @@ loginForm.addEventListener("submit", async event => {
   await login(data);
   loginButton.setAttribute("disabled", false);
 });
+isAuthenticated();

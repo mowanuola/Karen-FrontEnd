@@ -24,7 +24,7 @@ async function calculateBMI(data) {
       alert(`Your BMI is ${json.user.bmi}`);
       window.location = "profile.html";
     } else {
-      alert("Error calculating BMI");
+      alert("Enter a value below 200 for height and a value below 150 for weight");
       submitButton.setAttribute("disabled", false);
     }
   } catch (error) {
@@ -44,7 +44,8 @@ bmiCalcForm.addEventListener("submit", async event => {
     height: bmiCalcForm.height.value,
     weight: bmiCalcForm.weight.value
   };
-  await calculateBMI(data);
+      await calculateBMI(data);
+  
 });
 
 isAuthenticated();

@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/mowanuola/Karen-FrontEnd#readme",
   "dependencies": {
+    "gijgo": "^1.9.13",
     "serve": "^10.1.2"
   }
 }

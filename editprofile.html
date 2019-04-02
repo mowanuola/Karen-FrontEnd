@@ -36,50 +36,31 @@
         <a href="/mealplanner">Meal Planner</a>
         <a href="/bmicalc">BMI Calculator</a>
         <a href="/dcc">Daily Calorie Calculator</a>
-        <button class="logout-btn">Sign out</button>
+        <a href="./Karen-Blog/index1.html">Blog</a>
+        <button class="logout-btn" onclick="logout()">Sign out</button>
       </div>
     </header>
-    <div class="container splash " style="padding-top: 0; margin-top: 100px;">
+    
+    <form id="editprofile-form" class="container splash signup-splash">
       <h2 style="font-weight: 10;">Edit Profile</h2>
-      <input
-        type="text"
-        class="input"
-        name="name"
-        id="name"
-        placeholder="Name"
-        required
-      />
-      <input
-        type="text"
-        class="input"
-        name="height"
-        id="height"
-        placeholder="Height"
-        required
-      />
-      <input
-        type="text"
-        class="input"
-        name="weight"
-        id="weight"
-        placeholder="Weight"
-        required
-      />
-
-      <select name="BloodType" id="BloodType" class="dropdown-menu">
-        <option value="empty">*Select your Blood Type*</option>
-        <option value="a">A</option>
-        <option value="b">B</option>
-        <option value="ab">AB</option>
-        <option value="o">O</option>
+      <input type="text" class="input" name="firstname" id="firstname" placeholder="First Name" required>
+      <input type="text" class="input" name="lastname" id="lastname" placeholder="Last Name" required>
+      <select name="sex" id="sex" class="dropdown-menu">
+        <option>*Select your Sex*</option>
+        <option value="Female">Female</option>
+        <option value="Male">Male</option>
       </select>
-      <button
-        type="submit"
-        class="button primary-button full-width splash-button"
-      >
-        Done
-      </button>
+      <select name="bloodtype" id="bloodtype" class="dropdown-menu">
+          <option>*Select your Blood Type*</option>
+          <option value="a">A</option>
+          <option value="b">B</option>
+          <option value="ab">AB</option>
+          <option value="o">O</option>
+        </select>
+      <button type="submit" class="button primary-button full-width splash-button" id="editprofile-button">Save</button>
+    </form>
     </div>
   </body>
   <script src="./js/app.js"></script>
+  <script src="./js/editprofile.js"></script>
 </html>

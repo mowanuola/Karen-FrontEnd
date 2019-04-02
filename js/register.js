@@ -1,4 +1,25 @@
+var today = new Date();
+var dd = today.getDate();
+var mm = today.getMonth() + 1; //January is 0!
+var yyyy = today.getFullYear();
+if (dd < 10) {
+  dd = "0" + dd;
+}
+if (mm < 10) {
+  mm = "0" + mm;
+}
+
+today = yyyy + "-" + mm + "-" + dd;
+document.getElementById("dob").setAttribute("max", today);
+
 const CONFIG = { API_URL: "http://localhost:8000" };
+
+function isAuthenticated() {
+  const token = localStorage.getItem("token");
+  if (token) {
+    window.location = "profile.html";
+  }
+}
 async function register(data) {
   try {
     const response = await fetch(`${CONFIG.API_URL}/register`, {
@@ -13,7 +34,7 @@ async function register(data) {
       localStorage.setItem("token", json.token);
       window.location = "profile.html";
     } else {
-      alert("Invalid registration!");
+      alert("Enter Valid details! ");
       return;
     }
   } catch (error) {
@@ -45,3 +66,4 @@ registerForm.addEventListener("submit", async event => {
   await register(data);
   registerButton.setAttribute("disabled", false);
 });
+isAuthenticated();

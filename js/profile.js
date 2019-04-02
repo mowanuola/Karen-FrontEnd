@@ -23,7 +23,7 @@ function displayData(data) {
   weightElement.innerHTML = `${data.weight} kg` || "N/A";
   heightElement.innerHTML = `${data.height} cm` || "N/A";
   emailElement.innerHTML = data.email;
-  bmiElement.innerHTML = data.bmi;
+  bmiElement.innerHTML = `${data.bmi || "N/A"} (${bmi(data.bmi)})`;
   dciElement.innerHTML = `${data.dci} calories`;
 }
 async function getData(data) {
@@ -49,6 +49,26 @@ async function getData(data) {
     console.log(error);
     alert("An error occurred");
     return;
+  }
+}
+function bmi(bmiValue) {
+  if (Number(bmiValue)) {
+    bmiValue = Number(bmiValue);
+    if (bmiValue < 18.5) {
+      return "Underweight";
+    } else if ((bmiValue > 18.5) & (bmiValue <= 24.9)) {
+      return "Normal Weight";
+    } else if ((bmiValue > 25) & (bmiValue <= 29.9)) {
+      return "Overweight";
+    } else if ((bmiValue > 30) & (bmiValue <= 34.9)) {
+      return "Obese Class I";
+    } else if ((bmiValue > 35) & (bmiValue <= 39.9)) {
+      return "Obese Class II";
+    } else {
+      return "Obese Class III";
+    }
+  } else {
+    return "N/A";
   }
 }
 isAuthenticated();
