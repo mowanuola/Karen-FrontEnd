@@ -276,7 +276,15 @@ button {
   border-radius: 6px;
   background-color: #f4f4f4;
 }
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 
+input[type="number"] {
+  -moz-appearance: textfield;
+}
 .submit {
   font-weight: 10;
 }
